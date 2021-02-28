@@ -1,0 +1,50 @@
+{
+  "short_name": "itv",
+  "name": "Weather: Do I need an umbrella?",
+  "icons": [
+    {
+      "src": "/www.itv.net/imgs/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/www.itv.net/imgs/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/www.itv.net/stream/APP/?source=pwa",
+  "background_color": "#3367D6",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "shortcuts": [
+    {
+      "name": "itv box",
+      "short_name": "itv Play",
+      "description": "View all media content",
+      "url": "/today?source=pwa",
+      "icons": [{ "src": "/www.itv.net/imgs/favicon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "itv Player",
+      "short_name": "itv",
+      "description": "View al content",
+      "url": "/www.itv.net/stream/APP/?source=pwa",
+      "icons": [{ "src": "/www.itv.net/imgs/favicon.png", "sizes": "192x192" }]
+    }
+  ],
+  "description": "itv play",
+  "screenshots": [
+    {
+      "src": "/www.itv.net/imgs/favicon.png",
+      "type": "image/png",
+      "sizes": "540x720"
+    },
+    {
+      "src": "/images/screenshot2.jpg",
+      "type": "image/jpg",
+      "sizes": "540x720"
+    }
+  ]
+}

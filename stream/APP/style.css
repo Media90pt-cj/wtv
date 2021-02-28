@@ -1,0 +1,325 @@
+@charset "utf-8";
+/* Medios fluidos sencillos
+   Nota: Los medios fluidos exigen la eliminación de los atributos de altura y anchura de los medios del código HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 no admite max-width (anchura máxima), por lo que usa de manera predeterminada una anchura del 100% */
+.ie6 img {
+	width:100%;
+}
+html, body{
+	background-color: black;
+	color:silver;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size:20px ;
+	overflow: hidden;
+}
+html, body, div{
+/* Keyword values */
+/*scrollbar-color: auto;*/
+scrollbar-color: dark;
+/*scrollbar-color: light;*/
+
+/* <color> values */
+scrollbar-color: rebeccapurple green;   /* Two valid colors.
+The first applies to the thumb of the scrollbar, the second to the track. */
+
+/* Global values */
+scrollbar-color: inherit;
+scrollbar-color: initial;
+scrollbar-color: unset;
+}
+a{color:aqua;}
+a:link{}
+a:visited{}
+a:hover{}
+#sidebar {
+	background-color: rgba(0, 0, 0, 0.623);
+	position:fixed;
+	width: 250px;
+	height: 90%;
+	overflow:auto;
+
+}
+#screen{
+	overflow: hidden;
+	background-color: rgba(63, 61, 61, 0.623);
+	width: 100%;
+	height:100%;
+	margin:0px;
+	position:fixed;
+	border: 0px solid grey;
+}
+h1, h2, h3, h4, h5, h6,hr,ul,li{
+margin:0px;
+}
+ul{
+	height: 300px;
+	overflow:auto;
+}
+li{
+	margin-left: -30px;
+}
+#footer{
+	position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  width: 100%;
+	  background-color: rgba(0, 0, 0, 0.623);
+	  color: white;
+	  text-align: center;
+}
+/*
+	Propiedades de cuadrícula fluida de Dreamweaver
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiración obtenida de "Responsive Web Design" de Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	y Golden Grid System de Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Diseño móvil: 480 px e inferior. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#screen {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#sidebar {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+
+/* Diseño tableta: de 481 px a 768 px. Hereda estilos de: Diseño móvil. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#sidebar {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+#screen {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	height:100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+}
+
+/* Diseño escritorio: de 769 px hasta un máximo de 1232 px.  Hereda estilos de: Diseño móvil y Diseño tableta. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	
+	width: 100%;
+	max-width: 100%;
+	padding-left: 0%;
+	padding-right: 0%;
+	margin: auto;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#sidebar {
+	
+	clear: both;
+	float: left;
+	margin-left: 0;
+	
+	display: block;
+}
+#screen {
+	
+	clear: both;
+	float: left;
+	margin-left: 0;
+	
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+}
+
+/*MEDIA PLAYER*/
+
+#amazingvideoplayer-videoPLAYERID .amazingvideoplayer-progress-played {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fcc500;
+	background-image: -ms-linear-gradient(top, #fede00 0%, #fcc500 100%);
+	background-image: -moz-linear-gradient(top, #fede00 0%, #fcc500 100%);
+	background-image: -o-linear-gradient(top, #fede00 0%, #fcc500 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fede00), color-stop(1, #fcc500));
+	background-image: -webkit-linear-gradient(top, #fede00 0%, #fcc500 100%);
+	background-image: linear-gradient(to bottom, #fede00 0%, #fcc500 100%);
+	}
+
+#amazingvideoplayer-videoPLAYERID .amazingvideoplayer-volume-bar-adjust-active {
+	background-color: #fcc500;
+	-webkit-box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+	-moz-box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+	box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+	}
+
+	.cont {
+		border: 1px solid black;
+	 
+		-webkit-box-shadow: inset 0 1px 0px rgba(255,255,255,.2);
+		-moz-box-shadow: inset 0 1px 0px rgba(255,255,255,.2);
+		box-shadow: inset 0 1px 0px rgba(255,255,255,.2);
+		background: #494949; /* Old browsers */
+	background: -webkit-linear-gradient(top, #494949 0%, #434242 31%, #393838 55%, #242323 83%, #1b1a1a 100%, #161515 100%, #0b0b0b 100%);
+	 
+		background: -moz-linear-gradient(top, #494949 0%, #434242 31%, #393838 55%, #242323 83%, #1b1a1a 100%, #161515 100%, #0b0b0b 100%);
+		background: -o-linear-gradient(top, #494949 0%, #434242 31%, #393838 55%, #242323 83%, #1b1a1a 100%, #161515 100%, #0b0b0b 100%);
+		background: -ms-linear-gradient(top, #494949 0%, #434242 31%, #393838 55%, #242323 83%, #1b1a1a 100%, #161515 100%, #0b0b0b 100%);
+		background: linear-gradient(top, #494949 0%, #434242 31%, #393838 55%, #242323 83%, #1b1a1a 100%, #161515 100%, #0b0b0b 100%); /* W3C */
+	-image  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#0b0b0b',GradientType=0 ); /* IE6-9 */
+	}
+	 
+	.container {
+		-webkit-transition: all .7s ease;
+		-moz-transition: all .7s ease;
+		-o-transition: all .7s ease;
+		-ms-transition: all .7s ease;
+		transition: all .7s ease;
+		position: absolute;
+		width: 427px;
+		height: 70px;
+	 
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	 
+		-webkit-box-shadow: 0px 0px 13px rgba(0,0,0,.3),inset 0 1px 0px rgba(255,255,255,.2);
+		-moz-box-shadow: 0px 0px 13px rgba(0,0,0,.3),inset 0 1px 0px rgba(255,255,255,.2);
+		box-shadow: 0px 0px 13px rgba(0,0,0,.3),inset 0 1px 0px rgba(255,255,255,.2);
+		top: 50%;
+		left: 50%;
+		margin: -214px 0px 0px -214px;
+		padding: 10px;
+	 
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	 
+	 
+	.containerLarge {
+		height: 427px;
+	}
+	 
+	.cover {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		opacity: 0;
+		width: 398px;
+		height: 10px;
+		border: 2px solid black;
+	 
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	 
+		-webkit-box-shadow: inset 0px 5px 5px rgba(0,0,0,1);
+		-moz-box-shadow: inset 0px 5px 5px rgba(0,0,0,1);
+		box-shadow: inset 0px 5px 5px rgba(0,0,0,1);
+	}
+	 
+	.coverLarge {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		filter: alpha(opacity=100);
+		opacity: 1;
+		height: 398px;
+	 
+		-webkit-transition: opacity .7s ease;
+		-moz-transition: opacity .7s ease;
+		-o-transition: opacity .7s ease;
+		-ms-transition: opacity .7s ease;
+		transition: opacity .7s ease;
+	 
+		-webkit-transition-delay: .5s;
+		-moz-transition-delay: .5s;
+		-o-transition-delay: .5s;
+		-ms-transition-delay: .5s;
+		transition-delay: .5s;
+	}
+	#amazingvideoplayer-videoPLAYERID .amazingvideoplayer-volume-bar-adjust-active {
+		background-color: #fcc500;
+		-webkit-box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+		-moz-box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+		box-shadow: inset 0 0 5px rgba( 255, 255, 255, 0.5 );
+		}
+		video .videoplayer-progress-played{
+			background-color: black;
+			color: silver;
+		}
